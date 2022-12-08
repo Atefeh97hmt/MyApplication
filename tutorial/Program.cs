@@ -30,7 +30,11 @@ namespace MyApplication
             Console.WriteLine("8) User Input Output");
             Console.WriteLine("9) Sum Of Two int Numbers");
             Console.WriteLine("10) Operators and simple calculator");
-            Console.WriteLine("11) Exit");
+            Console.WriteLine("11) Comparison Operators");
+            Console.WriteLine("12) Data Type");
+            Console.WriteLine("13) simple If Condition for comparing two nums");
+            Console.WriteLine("14) stars");
+            Console.WriteLine("15) Exit");
 
             switch (Console.ReadLine())
             {
@@ -63,6 +67,18 @@ namespace MyApplication
                     return true;
                 case "10":
                     Calculator();
+                    return true;
+                case "11":
+                    ComparisonOperators();
+                    return true;
+                case "12":
+                    DataType();
+                    return true;
+                case "13":
+                    IfCondition();
+                    return true;
+                case "14":
+                    starts();
                     return true;
                 default:
                     return false;
@@ -261,6 +277,118 @@ namespace MyApplication
             Console.WriteLine("Division\t{0}", div);
             Console.ReadKey();
         }
+
+
+
+
+
+
+
+        ////////////////////////comparison operators///////////////////////////
+
+        private static void ComparisonOperators()
+        {
+            Console.WriteLine("== \t\t Equal to\t\t x == y	");
+            Console.WriteLine("!=\t\tNot equal\t\t x != y	");
+            Console.WriteLine(">\t\tGreater than\t\t x > y	");
+            Console.WriteLine("<\t\tLess than\t\t x < y ");
+            Console.WriteLine(">=\t\t Greater than or equal to\t\t	x >= y	");
+            Console.WriteLine("<=\t\tLess than or equal to\t\t x <= y	");
+
+            Console.ReadKey();
+        }
+
+        ////////////////////////Data Type///////////////////////////
+
+        private static void DataType()
+        {
+            Console.WriteLine("int:	4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647");
+            Console.WriteLine("long:	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807");
+            Console.WriteLine("float:   4 bytes Stores fractional numbers.Sufficient for storing 6 to 7 decimal digits");
+            Console.WriteLine("double:  8 bytes Stores fractional numbers.Sufficient for storing 15 decimal digits");
+            Console.WriteLine("bool:	1 bit	Stores true or false values");
+            Console.WriteLine("char:	2 bytes	Stores a single character/letter, surrounded by single quotes");
+            Console.WriteLine("string:	2 bytes per character	Stores a sequence of characters, surrounded by double quotes");
+            Console.ReadKey();
+        }
+
+
+
+        //////////////////////// simple If Condition for comparing two nums///////////////////////////
+
+        private static void IfCondition()
+        {
+            Console.WriteLine("please enter number1 ");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("please enter number2 ");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+
+            if (number1 < number2)
+            {
+                Console.WriteLine("number1 is less than number2");
+            }
+            //if (number1 > number2)
+            //{
+            //    Console.WriteLine("number1 is greater than number2 ");
+            //}
+
+            else if (number1 == number2)
+            {
+                Console.WriteLine("number1 is equal to number2 ");
+
+            }
+
+            else
+            {
+                Console.WriteLine("number1 is greater than number2 ");
+            }
+            Console.ReadKey();
+        }
+
+
+        //////////////////////// star paterns///////////////////////////
+
+        public static void starts()
+        {
+            int number, i, k, count = 1;
+            Console.Write("Enter number of rows\n");
+            number = int.Parse(Console.ReadLine());
+            count = number - 1;
+            for (k = 1; k <= number; k++)
+            {
+                for (i = 1; i <= count; i++)
+                    Console.Write(" ");
+                count--;
+                for (i = 1; i <= 2 * k - 1; i++)
+                    Console.Write("*");
+                Console.WriteLine();
+            }
+            count = 1;
+            for (k = 1; k <= number - 1; k++)
+            {
+                for (i = 1; i <= count; i++)
+                    Console.Write(" ");
+                count++;
+                for (i = 1; i <= 2 * (number - k) - 1; i++)
+                    Console.Write("*");
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+
+        //public static void starts()
+        //{
+        //    string series = string.Empty;
+        //    for (int i = 0; i <= 5; i++)
+        //    {
+        //        series += "*";
+        //        Console.WriteLine(series);
+        //    }
+
+        //    Console.ReadLine();
+        //}
+
 
     }
 
