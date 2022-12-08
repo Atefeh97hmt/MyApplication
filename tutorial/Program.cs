@@ -29,7 +29,8 @@ namespace MyApplication
             Console.WriteLine("7) Sum Of Two Numbers");
             Console.WriteLine("8) User Input Output");
             Console.WriteLine("9) Sum Of Two int Numbers");
-            Console.WriteLine("10) Exit");
+            Console.WriteLine("10) Operators and simple calculator");
+            Console.WriteLine("11) Exit");
 
             switch (Console.ReadLine())
             {
@@ -59,6 +60,9 @@ namespace MyApplication
                     return true;
                 case "9":
                     SumOfTwoIntNumber();
+                    return true;
+                case "10":
+                    Calculator();
                     return true;
                 default:
                     return false;
@@ -230,6 +234,31 @@ namespace MyApplication
 
             Console.Write("the sum of {0} and {1} is {2}", a, b, c);
 
+            Console.ReadKey();
+        }
+
+        ////////////////////////operators and simple calculator///////////////////////////
+
+        private static void Calculator()
+        {
+            int number1;
+            int number2;
+            int add, sub, mul, rem;
+            float div;
+            Console.Write("please enter number1 ");
+            number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("please enter number2 ");
+            number2 = Convert.ToInt32(Console.ReadLine());
+            add = number1 + number2;
+            sub = number1 - number2;
+            mul = number1 * number2;
+            rem = number1 % number2;
+            div = (float)number1 / number2;
+            Console.WriteLine("Addition\t{0}", add);
+            Console.WriteLine("Subtraction\t{0}", sub);
+            Console.WriteLine("Multiplication\t{0}", mul);
+            Console.WriteLine("Remainder\t{0}", rem);
+            Console.WriteLine("Division\t{0}", div);
             Console.ReadKey();
         }
 
