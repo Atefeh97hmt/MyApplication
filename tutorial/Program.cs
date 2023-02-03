@@ -34,7 +34,8 @@ namespace MyApplication
             Console.WriteLine("12) Data Type");
             Console.WriteLine("13) simple If Condition for comparing two nums");
             Console.WriteLine("14) stars");
-            Console.WriteLine("15) Exit");
+            Console.WriteLine("15) Fibonacci Series");
+            Console.WriteLine("16) Exit");
 
             switch (Console.ReadLine())
             {
@@ -80,10 +81,15 @@ namespace MyApplication
                 case "14":
                     starts();
                     return true;
+                case "15":
+                    FibonacciSeries();
+                    return true;
                 default:
                     return false;
             }
         }
+
+      
 
 
         /////////////////////////print string///////////////////////////
@@ -388,6 +394,26 @@ namespace MyApplication
 
         //    Console.ReadLine();
         //}
+
+
+        //////////////////////// Fibonacci Series///////////////////////////
+
+            public static void FibonacciSeries()
+            {
+                int number1 = 0, nunmer2 = 1, number3, i, number;
+                Console.Write("Enter the number of elements: ");
+                number = int.Parse(Console.ReadLine());
+                Console.Write(number1 + " " + nunmer2 + " "); //printing 0 and 1    
+                for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
+                {
+                number3 = number1 + nunmer2;
+                    Console.Write(number3 + " ");
+                number1 = nunmer2;
+                nunmer2 = number3;
+                }
+               Console.ReadKey();
+
+        }
 
 
     }
