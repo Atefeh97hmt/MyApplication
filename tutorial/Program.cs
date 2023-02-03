@@ -35,7 +35,8 @@ namespace MyApplication
             Console.WriteLine("13) simple If Condition for comparing two nums");
             Console.WriteLine("14) stars");
             Console.WriteLine("15) Fibonacci Series");
-            Console.WriteLine("16) Exit");
+            Console.WriteLine("16) Enter a string");
+            Console.WriteLine("17) Exit");
 
             switch (Console.ReadLine())
             {
@@ -84,6 +85,9 @@ namespace MyApplication
                 case "15":
                     FibonacciSeries();
                     return true;
+                case "16":
+                    EnterYourName();
+                    return true;
                 default:
                     return false;
             }
@@ -93,12 +97,6 @@ namespace MyApplication
 
 
         /////////////////////////print string///////////////////////////
-        //private static void PrintString()
-        //{
-        //    Console.Write("atefeh");
-        //    Console.ReadKey();
-
-        //}
         private static void PrintString()
         {
             string name = "atefeh";
@@ -118,8 +116,6 @@ namespace MyApplication
         }
 
         ////////////////////////Add two numbers that user enter///////////////////////////
-
-
         private static void AddTwoUserEnterNumbers()
         {
             //int number1;
@@ -132,8 +128,6 @@ namespace MyApplication
             Console.WriteLine("sum of two numbers:" + result.ToString());
             Console.ReadKey();
             }
-
-
 
         //////////////////////average of five numbers that user enter///////////////////////////
 
@@ -414,7 +408,14 @@ namespace MyApplication
                Console.ReadKey();
 
         }
-
+        //*** Create a string variable and get user input from the keyboard and store it in the variable ***
+        private static void EnterYourName()
+        {
+            Console.WriteLine("Enter your name :");
+            string name = Console.ReadLine();
+            Console.WriteLine("the entered name is :" + name);
+            Console.ReadKey();
+        }
 
     }
 
